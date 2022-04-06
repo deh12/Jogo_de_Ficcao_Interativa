@@ -12,6 +12,7 @@ let jogador = {
     }
 }
 
+let opcoes = ['Olhar Baú', 'Ir para outro comodo', 'Cozinha', 'Garagem', 'Sótão', 'Banheiro', 'Embaixo da escada', 'Corredor', 'Quarto 2', 'Quarto Granny']
 
 let granny = {
     ataque: 20,
@@ -56,7 +57,7 @@ for (let i = 100; jogador.vida > 0; jogador.vida -= 20) {
 console.log();
 
 status();
-console.log(`${nome}, você está em um dos quartos, encontre a chave para fugir..\n[1] Olhar Baú. \n[2] Ir para outro comodo.`); 
+console.log(`${nome}, você está em um dos quartos, encontre a chave para fugir..\n[1] ${opcoes[0]}. \n[2] ${opcoes[1]}.`); 
 console.log();
 
 let resposta = +prompt('Escolha: ');
@@ -69,7 +70,7 @@ if(resposta === 1){
     jogo();
     }else if(resposta === 2 ) {
         status();
-        console.log('Você está na sala, mas não encontra a chave.\nProcure em outro lugar..\n[1] Cozinha. \n[2] Garagem.')
+        console.log(`Você está na sala, mas não encontra a chave.\nProcure em outro lugar..\n[1] ${opcoes[2]}. \n[2] ${opcoes[3]}.`)
         console.log();
         resposta = +prompt('Escolha: ');
         console.clear();
@@ -82,7 +83,7 @@ if(resposta === 1){
     jogo();
 }else if(resposta === 2 ) {
     status();
-    console.log('A chave não está na garagem..\nProcure em outro lugar..\n[1] Sótão. \n[2] Banheiro.')
+    console.log(`A chave não está na garagem..\nProcure em outro lugar..\n[1] ${opcoes[4]}. \n[2] ${opcoes[5]}.`)
 }
 
 resposta = +prompt('Escolha: ');
@@ -94,7 +95,7 @@ if(resposta === 1){
     jogo();
 }else if(resposta === 2 ) {
     status();
-    console.log('A chave não está no banheiro..\nProcure em outro lugar..\n[1] Embaixo da escada. \n[2] Corredor.')
+    console.log(`A chave não está no banheiro..\nProcure em outro lugar..\n[1] ${opcoes[6]}. \n[2] ${opcoes[7]}.`)
 }
 
 resposta = +prompt('Escolha: ');
@@ -106,7 +107,7 @@ if(resposta === 1){
     jogo();
 }else if(resposta === 2 ) {
     status();
-    console.log('A chave não está no corredor..\nProcure em outro lugar..\n[1] Quarto 2. \n[2] Quarto Granny.')
+    console.log(`A chave não está no corredor..\nProcure em outro lugar..\n[1] ${opcoes[8]}. \n[2] ${opcoes[9]}.`)
 }
 
 resposta = +prompt('Escolha: ');
